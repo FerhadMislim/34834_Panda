@@ -1,9 +1,9 @@
 <div style="text-align: center" >
-<h1> Fundamentals of Software Design and Development<br> Group Project </h1>
+<h1> Fundamentals of Software Design and Development<br></h1>
 </div>
-<h1> SYST 17796 TEAM PROJECT<br> Group Project </h1>
+<h2> SYST 17796 TEAM PROJECT<br> Group Project</h2>
 <h2>Panda Group</h2> 
-<strong Style = "color: red">War Game</strong>
+<strong Style="color: red">War Game</strong>
 
 # Team Members
 <ul>
