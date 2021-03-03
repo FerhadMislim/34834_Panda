@@ -11,6 +11,7 @@ package ca.sheridancollege.project;
  *
  * @author dancye
  * @author Megha Patel
+ * @author Ferhad Mislim
  */
 public abstract class Card {
     //default modifier for child classes
