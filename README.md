@@ -6,7 +6,7 @@
 # Team Members
 <ul>
   <li>Blake Boyd-Lowry</li>
-  <li>Norman</li>
+  <li>Izaac Gabriel Palattao Robles</li>
   <li>Ferhad Mislim</li>
 </ul>
 
