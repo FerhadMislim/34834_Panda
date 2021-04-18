@@ -7,6 +7,7 @@ package ca.sheridancollege.project;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 /**
  * A concrete class that represents any grouping of cards for a Game. HINT, you might want to subclass this more than
@@ -16,24 +17,30 @@ import java.util.Collections;
  * @author Paul Bonenfant Jan 2020
  * @author Megha Patel
  * @author Ferhad Mislim
+ * @modifier Blake Boyd-Lowry
  */
 public class GroupOfCards {
 
-    //The group of cards, stored in an ArrayList
-    private ArrayList<Card> cards;
-    private int size;//the size of the grouping
+    private int size;
+    private final ArrayList<Card> cards = new ArrayList<Card>();//the size of the grouping
 
     public GroupOfCards(int size) {
         this.size = size;
+        
+        // Generating hand
+        for(int i = 0; i < size; i++) {
+            int suit = new Random().nextInt(Suit.values().length);
+            int value = new Random().nextInt(Value.values().length);
+            
+            cards.add(new Card(
+                    Value.values()[value],
+                    Suit.values()[suit]
+            ));
+        }
     }
-
-    /**
-     * A method that will get the group of cards as an ArrayList
-     *
-     * @return the group of cards.
-     */
-    public ArrayList<Card> getCards() {
-        return cards;
+    
+    public void addCard(Card card) {
+        cards.add(card);
     }
 
     public void shuffle() {
@@ -44,7 +51,7 @@ public class GroupOfCards {
      * @return the size of the group of cards
      */
     public int getSize() {
-        return size;
+        return cards.size();
     }
 
     /**
@@ -52,6 +59,30 @@ public class GroupOfCards {
      */
     public void setSize(int size) {
         this.size = size;
+    }
+
+    public ArrayList<Card> getCards() {
+        return cards;
+    }
+
+    /**
+     * 
+     * @param index
+     */
+    public Card getCard(int index) {
+        return cards.get(index);
+    }
+
+    /**
+     * 
+     * @param index
+     */
+    public Card drawCard() {
+        Card card = cards.get(0);
+        cards.remove(0);
+        cards.trimToSize();
+        
+        return card;
     }
 
 }//end class

@@ -12,20 +12,23 @@ package ca.sheridancollege.project;
  * @author dancye
  * @author Megha Patel
  * @author Ferhad Mislim
+ * @modifier Blake Boyd-Lowry
  */
 public class Card {
     //default modifier for child classes
-    private Suit suit;
-    private Value value;
+    private Suit attribute;
+    private Value attribute2;
+	private Suit suit;
+	private Value value;
     public Card (Value cardValue, Suit suit)
    {
       this.value = cardValue;
       this.suit = suit;
    }
 
-   public Suit getSuit ()
+   public String getSuit ()
    {
-      return suit;
+      return suit.getSuit();
    }
 
    public void setSuit (Suit suit)
@@ -33,9 +36,9 @@ public class Card {
       this.suit = suit;
    }
 
-   public Value getValue ()
+   public int getValue ()
    {
-      return value;
+      return value.getValue();
    }
 
    public void setValue (Value value)
