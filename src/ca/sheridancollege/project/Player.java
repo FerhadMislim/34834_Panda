@@ -45,8 +45,8 @@ public class Player {
         return hand.drawCard();
     }
     
-    public boolean validName() {
-        return getName().length() > 5;
+    public static boolean validName(String name) {
+        return name.length() > 5;
     }
 
 }

@@ -157,7 +157,7 @@ public abstract class Game {
             System.out.print("Enter a username for player " + i + ": ");
             players.get(i - 1).setName(scan.nextLine());
             
-            if(players.get(i - 1).validName()) {
+            if(Player.validName(players.get(i - 1).getName())) {
                 System.out.println("Named successfully added.");
             }
             else {
